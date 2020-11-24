@@ -1,6 +1,5 @@
 .Glavni-div{
-   
-   
+   display: flex;
 }
 .Panel{
     border: 1px solid red;
@@ -12,6 +11,21 @@
 
 .navigacija{
     border: 1px solid blue;
-    height: 80px;
+    height: 80%;
     width: 15%;
+}
+.GlavniDeo{
+    border:1px solid green;
+    height: 80%;
+    width: 70%;
+}
+.Korpa{
+    border: 1px solid black;
+    height: 70%;
+    width: 15%;
+}
+.Footer{
+    border: 1px solid yellowgreen;
+    height:10% ;
+    width: 100%;
 }
