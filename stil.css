@@ -1,0 +1,17 @@
+.Glavni-div{
+   
+   
+}
+.Panel{
+    border: 1px solid red;
+    width: 100%;
+    height: 20%;
+    text-align: center;
+    font-size: 150px;
+}
+
+.navigacija{
+    border: 1px solid blue;
+    height: 80px;
+    width: 15%;
+}
