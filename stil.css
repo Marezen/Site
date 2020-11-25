@@ -13,6 +13,8 @@
     border: 1px solid blue;
     height: 80%;
     width: 15%;
+    display: flex;
+    flex-direction: column;
 }
 .GlavniDeo{
     border:1px solid green;
