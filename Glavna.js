@@ -26,7 +26,7 @@ export class Glavna{
         const korpa=document.createElement("div");
         korpa.className="Korpa";
         korpa.innerHTML="Korpa";
-        this.conteiner.appendChild(korpa);ss
+        this.conteiner.appendChild(korpa);
         
         this.footer=document.createElement("div");
         this.footer.className="Footer";
