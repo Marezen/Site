@@ -1,3 +1,10 @@
+body
+{
+  background-image: url('background.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
 .Glavni-div{
    display: flex;
 }
@@ -9,13 +16,6 @@
     
 }
 
-.navigacija{
-    border: 1px solid blue;
-    height: 80%;
-    width: 15%;
-    display: flex;
-    flex-direction: column;
-}
 .GlavniDeo{
     border:1px solid green;
     height: 80%;
@@ -31,3 +31,96 @@
     height:10% ;
     width: 100%;
 }
+
+a
+{
+    text-align: left;
+    font-size: 17px;
+    margin-left: 2px;
+    margin-top:2px;
+    text-decoration: none;
+}
+a:hover{
+    color:yellow;
+    cursor:pointer;
+    text-decoration: underline;
+    
+}
+
+
+
+
+
+.GornjiDeo
+{
+    display: flex;
+    flex-direction: row;
+
+}
+.Logo
+{
+    width: 200px;
+    Height: 200px;
+    background-image: url('Logo.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.DesniDeo
+{
+    background-color: white;
+    width: 80%;
+    height: 200px;
+}
+
+
+
+.poslednja
+{
+    float:right;
+}
+
+
+
+
+
+
+
+ul {
+    list-style-type: none;
+    margin: 2px;
+    padding: 0;
+    overflow: hidden;
+    background-color: RGB(87, 0, 55);
+    top: 0;
+  }
+  
+  li {
+    float: left;
+    border-right:1px solid #bbb;
+  }
+  
+  li:last-child {
+    border-left: 1px solid #bbb;
+    float: right;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover:not(.active) {
+    background-color: #111;
+  }
+  @media screen and (max-width: 550px ) {
+     li a {
+      text-align: center;
+      float:center;
+      padding: 7px;
+    }
+    .Logo{width:180px;height:200px}
+  }
+

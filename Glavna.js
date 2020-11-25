@@ -3,7 +3,33 @@ export class Glavna{
         this.conteiner=null;
         this.footer=null;
     }
+    
+    //glavni deo
     crtaj(host){
+
+//dodatan jedan deo,iznad, da ima 2 DIV elementa
+//u prvom je slika,kao LOGO,a desno naslov ili tako nesto
+        const gornjiDeo = document.createElement("div");
+        gornjiDeo.className = "GornjiDeo";
+        host.appendChild(gornjiDeo);
+        //u njemu ova 2
+        const Logo = document.createElement("div");
+        Logo.className="Logo";
+        Logo.innerHTML = "Logo";
+        gornjiDeo.appendChild(Logo);
+
+        const DesniDeo = document.createElement("div");
+        DesniDeo.className="DesniDeo";
+        DesniDeo.innerHTML="vezano za njeno ime";
+        gornjiDeo.appendChild(DesniDeo);
+
+        
+
+
+        //basic deo:
+        const navigacija=document.createElement("div");
+        host.appendChild(navigacija);
+
         const panel=document.createElement("div");
         panel.className="Panel";
         panel.innerHTML="PANEL"
@@ -13,9 +39,7 @@ export class Glavna{
         this.conteiner.className="Glavni-div";
         host.appendChild(this.conteiner);
 
-        const navigacija=document.createElement("div");
-        navigacija.className="navigacija";
-        this.conteiner.appendChild(navigacija);
+        
         this.crtajNavigaciju(navigacija);
 
         const glavniDeo=document.createElement("div");
@@ -33,21 +57,84 @@ export class Glavna{
         this.footer.innerHTML="Footer";
         host.appendChild(this.footer);
     }
-    crtajNavigaciju(host){
-        const l1=document.createElement("label");
-        l1.innerHTML="Pocetna".link("Index.html");
-        host.appendChild(l1);
 
-        const l2=document.createElement("label");
-        l2.innerHTML="Kontakt";
-        host.appendChild(l2);
+    //navigacija  / LINKOVI
+    crtajNavigaciju(host)
+    {
+        var List = document.createElement("ul");
+        List.className= "sidenav";
+        host.appendChild(List);
 
-        const l3=document.createElement("label");
-        l3.innerHTML="About";
-        host.appendChild(l3);
+        var li1 = document.createElement("li");
+        List.appendChild(li1);
+        //pocetna
+        var a1 = document.createElement('a');
+        var link1 = document.createTextNode("Pocetna");
+        a1.appendChild(link1);
+        a1.className="Linkovi";
+        a1.title= "Pocetna";
+        a1.href =""; 
+        li1.appendChild(a1);
 
-        const l4=document.createElement("label");
-        l4.innerHTML="Help";
-        host.appendChild(l4);
+        var li2 = document.createElement("li");
+        List.appendChild(li2);
+        //instagram
+        var a2 = document.createElement('a');
+        var link2 = document.createTextNode("Instagram");
+        a2.appendChild(link2);
+        a2.className="Linkovi";
+        a2.title= "Facebook";
+        a2.href ="https://www.instagram.com/makinislatkisi/"; 
+        li2.appendChild(a2);
+
+        var li3 = document.createElement("li");
+        List.appendChild(li3);
+        //Facebook
+        var a3 = document.createElement('a');
+        var link3 = document.createTextNode("Facebook");
+        a3.appendChild(link3);
+        a3.className="Linkovi";
+        a3.title= "Facebook";
+        a3.href ="https://www.facebook.com/makinislatkisi"; 
+        li3.appendChild(a3);
+
+        var li4 = document.createElement("li");
+        List.appendChild(li4);
+        //Kontakt
+        var a4 = document.createElement('a');
+        var link4 = document.createTextNode("Kontakt");
+        a4.appendChild(link4);
+        a4.className="Linkovi";
+        a4.title= "Kontakt";
+        a4.href =""; 
+        li4.appendChild(a4);
+
+        var li5 = document.createElement("li");
+        List.appendChild(li5);
+        //About
+        var a5 = document.createElement('a');
+        var link5 = document.createTextNode("About");
+        a5.appendChild(link5);
+        a5.style = "Poslednja";
+        a5.title= "About";
+        a5.href =""; 
+        li5.appendChild(a5);
+
+        var li6 = document.createElement("li");
+        List.appendChild(li6);
+        //Help
+        var a6 = document.createElement('a');
+        var link6 = document.createTextNode("Help");
+        a6.appendChild(link6);
+        a6.className="Linkovi";
+        a6.title= "Help";
+        a6.href =""; 
+        li6.appendChild(a6);
+    }
+
+    //deo u kome ce 90% stvari da se desavaju
+    crtajSrednjiDeo()
+    {
+
     }
 }
