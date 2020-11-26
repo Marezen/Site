@@ -18,12 +18,22 @@ export class Glavna{
         Logo.innerHTML = "Logo";
         gornjiDeo.appendChild(Logo);
 
+        //slideshow
         const DesniDeo = document.createElement("div");
         DesniDeo.className="DesniDeo";
         DesniDeo.innerHTML="vezano za njeno ime";
         gornjiDeo.appendChild(DesniDeo);
 
-        
+    
+
+
+
+
+
+
+
+
+
 
 
         //basic deo:
@@ -39,7 +49,6 @@ export class Glavna{
         this.conteiner.className="Glavni-div";
         host.appendChild(this.conteiner);
 
-        
         this.crtajNavigaciju(navigacija);
 
         const glavniDeo=document.createElement("div");
@@ -49,8 +58,9 @@ export class Glavna{
 
         const korpa=document.createElement("div");
         korpa.className="Korpa";
-        korpa.innerHTML="Korpa";
+        korpa.innerHTML="korpa";
         this.conteiner.appendChild(korpa);
+
         
         this.footer=document.createElement("div");
         this.footer.className="Footer";

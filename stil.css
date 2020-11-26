@@ -18,14 +18,19 @@ body
 
 .GlavniDeo{
     border:1px solid green;
+    background-color: pink;
     height: 80%;
     width: 70%;
+
 }
 .Korpa{
     border: 1px solid black;
-    height: 70%;
-    width: 15%;
+    height: 80%;
+    width: 30%;
+
+
 }
+
 .Footer{
     border: 1px solid yellowgreen;
     height:10% ;
@@ -70,6 +75,7 @@ a:hover{
     background-color: white;
     width: 80%;
     height: 200px;
+    margin: auto;
 }
 
 
@@ -92,7 +98,7 @@ ul {
     overflow: hidden;
     background-color: RGB(87, 0, 55);
     top: 0;
-  }
+ }
   
   li {
     float: left;
@@ -124,3 +130,8 @@ ul {
     .Logo{width:180px;height:200px}
   }
 
+img{vertical-align: middle;}
+.Slides_Fade
+{
+  display: none;
+}
