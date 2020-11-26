@@ -2,6 +2,7 @@ export class Glavna{
     constructor(){
         this.conteiner=null;
         this.footer=null;
+        this.DesniDeo=null;
     }
     
     //glavni deo
@@ -15,14 +16,13 @@ export class Glavna{
         //u njemu ova 2
         const Logo = document.createElement("div");
         Logo.className="Logo";
-        Logo.innerHTML = "Logo";
+        
         gornjiDeo.appendChild(Logo);
 
         //slideshow
-        const DesniDeo = document.createElement("div");
-        DesniDeo.className="DesniDeo";
-        DesniDeo.innerHTML="vezano za njeno ime";
-        gornjiDeo.appendChild(DesniDeo);
+        this.DesniDeo = document.createElement("div");
+        this.DesniDeo.className="DesniDeo";
+        gornjiDeo.appendChild(this.DesniDeo);
 
     
 
@@ -42,7 +42,6 @@ export class Glavna{
 
         const panel=document.createElement("div");
         panel.className="Panel";
-        panel.innerHTML="PANEL"
         host.appendChild(panel);
 
         this.conteiner=document.createElement("div");
@@ -54,12 +53,10 @@ export class Glavna{
         const glavniDeo=document.createElement("div");
         glavniDeo.className="GlavniDeo";
         glavniDeo.innerHTML="GlavniDeo";
-        this.conteiner.appendChild(glavniDeo);
+        panel.appendChild(glavniDeo);
 
-        const korpa=document.createElement("div");
-        korpa.className="Korpa";
-        korpa.innerHTML="korpa";
-        this.conteiner.appendChild(korpa);
+
+        this.SlideShow(this.DesniDeo);
 
         
         this.footer=document.createElement("div");
@@ -67,6 +64,37 @@ export class Glavna{
         this.footer.innerHTML="Footer";
         host.appendChild(this.footer);
     }
+
+    SlideShow(host){
+        var s1=document.createElement("img");
+        s1.className="slike";
+        s1.src="slika1.jpg";
+        host.appendChild(s1);
+
+        
+        var i=-1;
+       
+
+        var s=this.DesniDeo.querySelector(".slike");
+        var images=['slika1.jpg','slika2.jpg','slika3.jpg','slika4.jpg'];
+        function menjaj(){
+            i++;
+            if(i>(images.length-1))
+            {
+                i=0;
+            }
+            s.setAttribute('src',images[i]);
+        }
+        function start()
+        {
+            setInterval(menjaj,3000);
+        }
+        start();
+        
+    }
+    
+
+
 
     //navigacija  / LINKOVI
     crtajNavigaciju(host)
