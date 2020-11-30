@@ -3,6 +3,10 @@ export class Glavna{
         this.conteiner=null;
         this.footer=null;
         this.DesniDeo=null;
+        this.listaArtikla=[];
+    }
+    dodajArtikle(a){
+        this.listaArtikla.push(a);
     }
     //glavni deo
     crtaj(host){
@@ -198,10 +202,38 @@ export class Glavna{
         //desni deo sa slikama
         const RadniDeo = document.createElement("div");
         RadniDeo.className="RadniDeo"; // to je srednji deo taj
-        RadniDeo.innerHTML = "Radni deo";
-        host.appendChild(RadniDeo); // desno 75%
+        host.appendChild(RadniDeo); // desno 50%
 
-        //desno listBox kao ,koji bi sadrzao sve stvari koje su selektovane
-        //const Korpa = document.createElement("div");
+        this.listaArtikla.forEach(el => {
+            var a=document.createElement("div");
+            a.className="PoljeArtikla";
+            RadniDeo.appendChild(a);
+
+            var l=document.createElement("label");
+            l.className="NazivArtikla";
+            l.innerHTML=el.Naziv;
+            a.appendChild(l);
+
+            var s=document.createElement("img");
+            s.className="SlikaArtikla";
+            s.src=el.Slika;
+            a.appendChild(s);
+
+            var c=document.createElement("label");
+            c.className="cenaArtikla";
+            c.innerHTML="Cena:"+el.Cena;
+            a.appendChild(c);
+
+            var dugmeDodaj=document.createElement("button");
+            dugmeDodaj.className="dodajDugme";
+            dugmeDodaj.innerHTML="Dodaj u korpu";
+            a.appendChild(dugmeDodaj);
+        });
+//deo za Korpu koji je 25% glavnog dela
+
+        const korpa=document.createElement("div");
+        korpa.className="Korpa";
+        korpa.innerHTML="Korpa";
+        host.appendChild(korpa);       
     }
 }
