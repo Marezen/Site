@@ -4,12 +4,11 @@ export class Glavna{
         this.footer=null;
         this.DesniDeo=null;
     }
-    
     //glavni deo
     crtaj(host){
 
-//dodatan jedan deo,iznad, da ima 2 DIV elementa
-//u prvom je slika,kao LOGO,a desno naslov ili tako nesto
+        //dodatan jedan deo,iznad, da ima 2 DIV elementa
+        //u prvom je slika,kao LOGO,a desno naslov ili tako nesto
         const gornjiDeo = document.createElement("div");
         gornjiDeo.className = "GornjiDeo";
         host.appendChild(gornjiDeo);
@@ -24,17 +23,6 @@ export class Glavna{
         this.DesniDeo.className="DesniDeo";
         gornjiDeo.appendChild(this.DesniDeo);
 
-    
-
-
-
-
-
-
-
-
-
-
 
         //basic deo:
         const navigacija=document.createElement("div");
@@ -44,20 +32,9 @@ export class Glavna{
         panel.className="Panel";
         host.appendChild(panel);
 
-        this.conteiner=document.createElement("div");
-        this.conteiner.className="Glavni-div";
-        host.appendChild(this.conteiner);
-
+        this.crtajGlavniDeo(panel);
         this.crtajNavigaciju(navigacija);
-
-        const glavniDeo=document.createElement("div");
-        glavniDeo.className="GlavniDeo";
-        glavniDeo.innerHTML="GlavniDeo";
-        panel.appendChild(glavniDeo);
-
-
         this.SlideShow(this.DesniDeo);
-
         
         this.footer=document.createElement("div");
         this.footer.className="Footer";
@@ -65,6 +42,7 @@ export class Glavna{
         host.appendChild(this.footer);
     }
 
+    //Slideshow funkcija
     SlideShow(host){
         var s1=document.createElement("img");
         s1.className="slike";
@@ -92,9 +70,6 @@ export class Glavna{
         start();
         
     }
-    
-
-
 
     //navigacija  / LINKOVI
     crtajNavigaciju(host)
@@ -171,8 +146,62 @@ export class Glavna{
     }
 
     //deo u kome ce 90% stvari da se desavaju
-    crtajSrednjiDeo()
+    crtajGlavniDeo(host)
     {
+        //3 dela
+        var navigacija2 = document.createElement("div");
+        navigacija2.className="Navigacija2";
+        host.appendChild(navigacija2); // levo 25%
 
+
+        var ul1 = document.createElement("ul");
+        ul1.className ="LevaNavigacija";
+        navigacija2.appendChild(ul1);
+
+        //prvi
+        var li_1 = document.createElement("li");
+        li_1.className="navigacija2_li";
+        ul1.appendChild(li_1);
+        var a_1 = document.createElement('a');
+        var Pregled_Kolaca = document.createTextNode("Pregled svih kolaca");
+        a_1.appendChild(Pregled_Kolaca);
+        a_1.className="LinkLevo";
+        a_1.title= "Prikazi sve kolace";
+        a_1.onclick = function() {}
+        li_1.appendChild(a_1);
+
+        //drugi
+        var li_2 = document.createElement("li");
+        li_2.className="navigacija2_li";
+        ul1.appendChild(li_2);
+        var a_2 = document.createElement('a');
+        var Pregled_Kolaca = document.createTextNode("TEMA");
+        a_2.appendChild(Pregled_Kolaca);
+        a_2.className="LinkLevo";
+        a_2.title= "Odaberite temu";
+        a_2.onclick = function() {}
+        li_1.appendChild(a_2);
+
+        //treci
+        var li_3 = document.createElement("li");
+        li_3.className="navigacija2_li";
+        ul1.appendChild(li_3);
+        var a_3 = document.createElement('a');
+        var Pregled_Kolaca = document.createTextNode("Narucivanje");
+        a_3.appendChild(Pregled_Kolaca);
+        a_3.className="LinkLevo";
+        a_3.title= "kliknite da biste izabrali kolaz za narucivanje";
+
+        a_3.onclick = function() {}
+        li_1.appendChild(a_3);
+
+        //desni deo sa slikama
+        const RadniDeo = document.createElement("div");
+        RadniDeo.className="RadniDeo"; // to je srednji deo taj
+        RadniDeo.innerHTML = "Radni deo";
+        host.appendChild(RadniDeo); // desno 75%
+
+        //desno listBox kao ,koji bi sadrzao sve stvari koje su selektovane
+        //const Korpa = document.createElement("div");
     }
 }
