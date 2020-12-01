@@ -59,21 +59,28 @@ body
 .RadniDeo
 {
   background-color: transparent;
-  display: flex;
+  width: 70%;
   
 }
+
 .PoljeArtikla{
   display: flex;
   flex-direction: column;
   border:1px solid black;
   float: left;
   text-align: center;
-  
+  margin:1%;
+}
+
+.brojArtikla{
+  margin-left:25%;
+  margin-right: 25%;
+  width: 50%;
 }
 
 .SlikaArtikla{
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
 }
 
 .Korpa{

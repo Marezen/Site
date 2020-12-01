@@ -224,6 +224,12 @@ export class Glavna{
             c.innerHTML="Cena:"+el.Cena;
             a.appendChild(c);
 
+            var ulaz=document.createElement("input");
+            ulaz.className="brojArtikla";
+            ulaz.type="number";
+            ulaz.defaultValue="1";
+            a.appendChild(ulaz);
+
             var dugmeDodaj=document.createElement("button");
             dugmeDodaj.className="dodajDugme";
             dugmeDodaj.innerHTML="Dodaj u korpu";
