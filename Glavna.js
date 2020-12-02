@@ -27,7 +27,7 @@ export class Glavna{
         this.DesniDeo.className="DesniDeo";
         gornjiDeo.appendChild(this.DesniDeo);
 
-
+        
         //basic deo:
         const navigacija=document.createElement("div");
         host.appendChild(navigacija);
@@ -235,6 +235,8 @@ export class Glavna{
             dugmeDodaj.innerHTML="Dodaj u korpu";
             a.appendChild(dugmeDodaj);
         });
+
+
 //deo za Korpu koji je 25% glavnog dela
 
         const korpa=document.createElement("div");
