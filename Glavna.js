@@ -17,7 +17,8 @@ export class Glavna{
         gornjiDeo.className = "GornjiDeo";
         host.appendChild(gornjiDeo);
         //u njemu ova 2
-        const Logo = document.createElement("div");
+        const Logo = document.createElement("img");
+        Logo.src="Logo.jpg"
         Logo.className="Logo";
         
         gornjiDeo.appendChild(Logo);

@@ -138,7 +138,7 @@ a:hover{
 {
     width: 200px;
     Height: 200px;
-    background-image: url('Logo.jpg');
+   
     background-repeat: no-repeat;
     background-size: cover;
 }
